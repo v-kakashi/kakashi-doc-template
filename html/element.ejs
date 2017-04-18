@@ -17,7 +17,7 @@
     var relativePath = "<%= file.relativePath %>";
 
     // 多说插件
-    <% if(file.duoshuoName != 'undefined') { %>
+    <% if(file.duoshuoName != null) { %>
     var duoshuoQuery = {short_name:"<%= file.duoshuoName %>"};
     	(function() {
     		var ds = document.createElement('script');
@@ -113,7 +113,7 @@
           </div>
         <% } %>
 
-        <% if(file.duoshuoName != 'undefined') { %>
+        <% if(file.duoshuoName != null) { %>
         <div class="ds-thread" data-thread-key="<%= file.resource.relativeToDemo %>" data-title="<%= file.title %>"></div>
         <% } %>
       </div>
